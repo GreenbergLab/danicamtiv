@@ -6,4 +6,6 @@ This repository contains the R code to re-produce all figures and most analysis 
 
 The main purpose of this repository is to supply the renv files to reproduce the R renvironment/packages versions used for reproducibility. 
 
+Most files have been /.gitignored except for code related files (.R, .lock, etc) due to file size limitations.
+
 
