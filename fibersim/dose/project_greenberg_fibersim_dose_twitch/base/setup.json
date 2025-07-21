@@ -1,0 +1,80 @@
+{
+  "FiberSim_setup":
+  {
+    "FiberCpp_exe": {
+      "relative_to": "False",
+      "exe_file": "E:/fibersim/FiberSim/bin/FiberCpp.exe"
+    },
+    "model": {
+      "relative_to": "this_file",
+      "options_file": "sim_options.json",
+       "manipulations":
+      {
+        "base_model": "model.json",
+        "generated_folder": "../generated",
+        "adjustments":
+        [
+            {
+                "variable": "m_isotype_proportions",
+                "proportions":
+                [
+                    {
+                        "isotype_proportions": [1.0, 0.0]
+                    },
+                     {
+                        "isotype_proportions": [0.95, 0.05]
+                    },
+                    {
+                        "isotype_proportions": [0.90, 0.1]
+                    },
+                    {
+                        "isotype_proportions": [0.80, 0.20]
+                    },
+                    {
+                        "isotype_proportions": [0.75, 0.25]
+                    },
+                      {
+                        "isotype_proportions": [0.5, 0.5]
+                    },
+                    {
+                        "isotype_proportions": [0.25, 0.75]
+                    },
+                     {
+                        "isotype_proportions": [0.00, 1.0]
+                    }
+                ]
+            }
+        ]
+      }
+
+    },
+    "characterization": [
+ {
+                "type": "twitch",
+                "relative_to": "this_file",
+                "sim_folder": "../sim_data/twitch",
+                "randomized_repeats": 5,
+                "m_n": 36,
+                "protocol":
+                {
+                    "protocol_folder": "../protocols",
+                    "data": [
+                        {
+                            "time_step_s": 0.001,
+                            "n_points": 800,
+                            "stimulus_times_s": [0.1],
+                            "Ca_content": 1e-3,
+                            "stimulus_duration_s": 0.02,
+                            "k_leak": 1e-3,
+                            "k_act": 1,
+                            "k_serca": 80
+                        }
+                    ]
+                },
+                "output_image_formats": [ "png" ],
+                "figures_only": "False",
+                "trace_figures_on": "False"
+            }
+    ]
+  }
+}

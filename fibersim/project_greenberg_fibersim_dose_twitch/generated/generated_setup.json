@@ -1,0 +1,50 @@
+{
+    "FiberSim_setup": {
+        "FiberCpp_exe": {
+            "relative_to": "False",
+            "exe_file": "E:/fibersim/FiberSim/bin/FiberCpp.exe"
+        },
+        "model": {
+            "relative_to": "this_file",
+            "options_file": "sim_options.json",
+            "model_files": [
+                "model_1.json",
+                "model_2.json",
+                "model_3.json",
+                "model_4.json",
+                "model_5.json",
+                "model_6.json"
+            ]
+        },
+        "characterization": [
+            {
+                "type": "twitch",
+                "relative_to": "this_file",
+                "sim_folder": "../sim_data/twitch",
+                "m_n": 16,
+                "protocol": {
+                    "protocol_folder": "../protocols",
+                    "data": [
+                        {
+                            "time_step_s": 0.001,
+                            "n_points": 800,
+                            "stimulus_times_s": [
+                                0.1
+                            ],
+                            "Ca_content": 0.001,
+                            "stimulus_duration_s": 0.02,
+                            "k_leak": 0.001,
+                            "k_act": 1,
+                            "k_serca": 80
+                        }
+                    ]
+                },
+                "output_image_formats": [
+                    "png"
+                ],
+                "figures_only": "False",
+                "trace_figures_on": "False"
+            }
+        ]
+    }
+}
